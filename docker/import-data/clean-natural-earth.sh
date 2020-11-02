@@ -34,6 +34,7 @@ count=0
 for tbl in $(echo \
   "select name from sqlite_master " \
   "WHERE type='table' AND name like 'ne%' and name not in (" \
+    "'ne_10m_admin_0_boundary_lines_disputed_areas'," \
     "'ne_10m_admin_0_boundary_lines_land'," \
     "'ne_10m_admin_0_countries'," \
     "'ne_10m_admin_1_states_provinces'," \
