@@ -3,6 +3,7 @@ FROM bash as downloader
 
 # Prepare Natural Earth data from http://www.naturalearthdata.com/
 COPY clean-natural-earth.sh /downloads/
+COPY env_local.sh .
 #COPY ${source:-clean-natural-earth.sh} ${destination:-/downloads/}
 RUN set -eux  ;\
     DIR=/downloads/natural_earth  ;\
